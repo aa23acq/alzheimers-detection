@@ -140,9 +140,9 @@ To improve the performance and robustness of the models, several avenues for fut
 - **Dataset Merging**: Merging datasets like OASIS and ADNI to provide a larger, more diverse dataset for training. This will help models generalize better across different patient populations.
 - **Model Annotation for Continuous Learning**: Developing systems where new MRI data can be continuously added and annotated, allowing the models to improve over time with active learning techniques.
 - **Transfer Learning**: Applying pre-trained models on large-scale datasets to new MRI datasets using transfer learning can improve generalization and reduce the risk of overfitting.
-- **Potential for improving models by exploring other architectures (e.g., DenseNet, Inception)
-- **Need for larger, more diverse datasets
-- **Integration of multimodal data (e.g., MRI + PET scans)
+- Potential for improving models by exploring other architectures (e.g., DenseNet, Inception)
+- Need for larger, more diverse datasets
+- Integration of multimodal data (e.g., MRI + PET scans)
 """)
 
 # Generalization Challenges Section
