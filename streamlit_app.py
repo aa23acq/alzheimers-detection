@@ -29,7 +29,7 @@ You can upload an MRI image to see the classification results and explore the pr
 """)
 
 # Tabbed layout for different sections of the app
-tab1, tab2, tab3 = st.tabs(["Home", "Model Performance", "About the Project"])
+tab1, tab2, tab3, tab4 = st.tabs(["Home", "Model Performance", "About the Project", "Next Steps and Future Work"])
 
 # Home Tab
 with tab1:
@@ -133,9 +133,32 @@ with tab3:
     ### Dataset:
     - The dataset used for this project is the OASIS (Open Access Series of Imaging Studies) MRI dataset, which includes Normal, MCI, and Alzheimer's Disease categories.
     """)
+with tab4:
+    st.header("Next Steps and Future Work")
+    st.write("""
+To improve the performance and robustness of the models, several avenues for future work have been identified:
+- **Dataset Merging**: Merging datasets like OASIS and ADNI to provide a larger, more diverse dataset for training. This will help models generalize better across different patient populations.
+- **Model Annotation for Continuous Learning**: Developing systems where new MRI data can be continuously added and annotated, allowing the models to improve over time with active learning techniques.
+- **Transfer Learning**: Applying pre-trained models on large-scale datasets to new MRI datasets using transfer learning can improve generalization and reduce the risk of overfitting.
+""")
+
+# Generalization Challenges Section
+st.write("## Challenges in Generalization")
+st.write("""
+While the models perform well on the OASIS dataset, they face certain challenges when generalizing to other datasets:
+- **Overfitting**: The relatively small size of the OASIS dataset can lead to overfitting, where the models perform well on the training data but fail to generalize to unseen data.
+- **Cross-Dataset Generalization**: Performance often drops when applying these models to different datasets such as ADNI or clinical data, indicating a need for better generalization techniques.
+- **Need for Multi-Modal Data**: Incorporating other types of data (e.g., PET scans, clinical history) could provide a more comprehensive view and improve diagnostic accuracy.
+""")
+
+# Footer
+st.write("""
+---
+Project by Adeola Akinwole  - Alzheimer's Disease Detection using Deep Learning Models (A performance evaluation).
+""")
 
 # Sidebar with Feedback form
-st.sidebar.header("Give Us Feedback")
+st.sidebar.header("Give Me Feedback")
 rating = st.sidebar.slider("Rate the application:", 1, 5)
 feedback = st.sidebar.text_area("Comments or suggestions")
 
